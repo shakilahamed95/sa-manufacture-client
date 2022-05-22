@@ -28,7 +28,8 @@ const Purshes = () => {
             email: user.email,
             address: event.target.address.value,
             phone: event.target.phone.value,
-            tool: event.target.quantity.value
+            tool: event.target.quantity.value,
+            totalMoney: parseInt(tool) * parseInt(tooldetails.price)
         }
         if (tool < tooldetails.minimum) {
             return toast(`you must order minimum ${tooldetails.minimum} set`)
@@ -49,6 +50,7 @@ const Purshes = () => {
                 .then(res => res.json())
                 .then(data => {
                     event.target.reset();
+                    toast.success("Your order has been booked. Please pay for further process")
                 })
             const { quantity } = tooldetails;
             const orderquantity = (event.target.quantity.value)
