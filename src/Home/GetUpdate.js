@@ -24,7 +24,7 @@ const GetUpdate = () => {
                     placeholder='Your message'
                     rows={5}
                 ></textarea>
-                <button className="btn btn-primary  text-white font-bold bg-primary">Submit</button>
+                <button className="btn btn-primary  text-white font-bold bg-neutral">Submit</button>
             </div>
         </div>
     );

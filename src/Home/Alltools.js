@@ -3,7 +3,12 @@ import useTools from '../hooks/useTools';
 import SingleTool from './SingleTool';
 
 const Alltools = () => {
-    const [tools] = useTools()
+    const [tools, setTools] = useTools()
+    if (tools.length > 6) {
+        const newTools = tools.slice(0, 6)
+        setTools(newTools)
+
+    }
     return (
         <div className='bg-base-100 my-8'>
             <h1 className='text-3xl text-primary text-center font-bold my-6'> Available Tools </h1>

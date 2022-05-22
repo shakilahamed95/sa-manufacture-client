@@ -7,6 +7,6 @@ const useTools = () => {
             .then(res => res.json())
             .then(data => setTools(data))
     }, [])
-    return [tools]
+    return [tools, setTools]
 }
 export default useTools;
