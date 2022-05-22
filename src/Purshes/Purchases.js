@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import auth from '../firebase.init';
 import Footer from '../Shared/Footer';
 import Navbar from '../Shared/Navbar';
 
 const Purshes = () => {
+    const [user] = useAuthState(auth);
     const { id } = useParams()
     const [tooldetails, setTooldetails] = useState({})
     useEffect(() => {
@@ -13,6 +17,60 @@ const Purshes = () => {
             .then(data => setTooldetails(data))
 
     }, [tooldetails])
+
+    const handlePurses = event => {
+        event.preventDefault();
+        const tool = event.target.quantity.value;
+        const order = {
+            productId: tooldetails._id,
+            name: tooldetails.name,
+            userName: user.displayName,
+            email: user.email,
+            address: event.target.address.value,
+            phone: event.target.phone.value,
+            tool: event.target.quantity.value
+        }
+        if (tool < tooldetails.minimum) {
+            return toast(`you must order minimum ${tooldetails.minimum} set`)
+
+        }
+        else if (tool > tooldetails.quantity) {
+            console.log(tooldetails.quantity);
+            return toast('Sorry we do not have available quantity please order less quantity')
+        }
+        else {
+            fetch('http://localhost:5000/orders', {
+                method: "POST",
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(order)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    event.target.reset();
+                })
+            const { quantity } = tooldetails;
+            const orderquantity = (event.target.quantity.value)
+            const orderquantityNumber = parseInt(orderquantity)
+            let newQuantity = (quantity) - orderquantityNumber
+            const updatedQuantity = { ...tooldetails, quantity: newQuantity }
+            setTooldetails(updatedQuantity)
+            const url = `http://localhost:5000/tools/${id}`;
+            fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(updatedQuantity)
+            })
+                .then(res => res.json())
+                .then(data => {
+                })
+        }
+
+
+    }
     return (
         <div>
             <Navbar></Navbar>
@@ -25,14 +83,15 @@ const Purshes = () => {
                         <h3 className='text-xl'> Price Tk:{tooldetails.price}</h3>
                         <h3 className='text-xl'> Available:{tooldetails.quantity}</h3>
                         <h3 className='text-xl'>Minimum Order:{tooldetails.minimum}</h3>
-                        <div class="card-actions justify-center">
-                            <input type="text" name='name' placeholder="Please enter your name" class="input input-bordered w-full max-w-xs" />
-                            <input type="text" name='email' placeholder="Please enter your email" class="input input-bordered w-full max-w-xs" />
+                        <form onSubmit={handlePurses} className='grid grid-cols-1 gap-3 justify-items-center mt-2'>
+                            <input type="text" name='name' disabled value={user?.displayName} class="input input-bordered w-full max-w-xs" />
+                            <input type="text" name='email' disabled value={user?.email} class="input input-bordered w-full max-w-xs" />
                             <input type="text" name='address' placeholder="Please enter your address" class="input input-bordered w-full max-w-xs" />
                             <input type="text" name='phone' placeholder=" Your phone number" class="input input-bordered w-full max-w-xs" />
                             <input type="text" name='quantity' placeholder=" Enter your quantity" class="input input-bordered w-full max-w-xs" />
-                            <button class="btn btn-primary">Complete purchase</button>
-                        </div>
+                            <br />
+                            <input className='btn btn-primary' type="submit" value="Submit" />
+                        </form>
                     </div>
                 </div>
             </div>
