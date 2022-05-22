@@ -5,7 +5,6 @@ const NotFound = () => {
     return (
         <div>
             <img src={notfound} alt="" />
-
         </div>
     );
 };
