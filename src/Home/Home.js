@@ -6,6 +6,7 @@ import Alltools from './Alltools';
 import Banner from './Banner/Banner';
 import BusinessSummery from './BusinessSummery';
 import Experts from './Experts';
+import GetUpdate from './GetUpdate';
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <Alltools></Alltools>
             <BusinessSummery></BusinessSummery>
             <AllReview></AllReview>
+            <GetUpdate></GetUpdate>
             <Footer></Footer>
         </div>
     );
