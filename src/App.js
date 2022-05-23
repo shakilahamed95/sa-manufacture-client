@@ -20,6 +20,7 @@ import RequireAdmin from './Shared/RequireAdmin';
 import ManageOrders from './Dashboard/ManageOrders';
 import ManageProducts from './Dashboard/ManageProducts';
 import AddProduct from './Dashboard/AddProduct';
+import RequireUser from './Shared/RequireUser';
 
 
 
@@ -40,8 +41,12 @@ function App() {
           </RequireAuth>
         }>
           <Route index element={<MyProfile></MyProfile>}></Route>
-          <Route path='review' element={<UserReview></UserReview>}></Route>
-          <Route path='myorder' element={<MyOrder></MyOrder>}></Route>
+          <Route path='review' element={
+            <RequireUser><UserReview></UserReview></RequireUser>
+          }></Route>
+          <Route path='myorder' element={
+            <RequireUser><MyOrder></MyOrder></RequireUser>
+          }></Route>
           <Route path='makeadmin' element={<RequireAdmin>
             <Users></Users>
           </RequireAdmin>}>

@@ -13,7 +13,7 @@ const UserRow = ({ user, index }) => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount > 0) {
-                    toast.success(`Successfully made an admin`);
+                    toast.success(`You have made a new admin`);
                 }
 
             })

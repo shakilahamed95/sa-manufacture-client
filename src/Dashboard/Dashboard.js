@@ -3,12 +3,14 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, Outlet } from 'react-router-dom';
 import auth from '../firebase.init';
 import useAdmin from '../hooks/useAdmin';
+import useNotAdmin from '../hooks/useNotAdmin';
 import Footer from '../Shared/Footer';
 import Navbar from '../Shared/Navbar';
 
 const Dashboard = () => {
     const [user] = useAuthState(auth)
     const [admin] = useAdmin(user)
+    const [notAdmin] = useNotAdmin(user)
 
     return (
         <div>
@@ -25,8 +27,12 @@ const Dashboard = () => {
                     <label for="my-drawer-2" class="drawer-overlay"></label>
                     <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
                         <li><Link to='/dashboard'>My Profile</Link></li>
-                        <li><Link to='/dashboard/review'>Add Review</Link></li>
-                        <li><Link to='/dashboard/myorder'>My Order</Link></li>
+                        {
+                            notAdmin && <>
+                                <li><Link to='/dashboard/review'>Add Review</Link></li>
+                                <li><Link to='/dashboard/myorder'>My Order</Link></li>
+                            </>
+                        }
                         {
                             admin && <>
                                 <li><Link to='/dashboard/makeadmin'>Make Admin</Link></li>
