@@ -95,7 +95,7 @@ const Purshes = () => {
                             <input type="text" name='phone' placeholder=" Your phone number" class="input input-bordered w-full max-w-xs" />
                             <input type="text" name='quantity' placeholder=" Enter your quantity" class="input input-bordered w-full max-w-xs" />
                             <br />
-                            <input className='btn btn-primary' type="submit" value="Submit" />
+                            <button class="btn btn-outline btn-primary">submit</button>
                         </form>
                     </div>
                 </div>
