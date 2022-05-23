@@ -15,6 +15,7 @@ import MyOrder from './Dashboard/MyOrder';
 import UserReview from './Dashboard/UserReview';
 import MyProfile from './Dashboard/MyProfile';
 import MyPortfolio from './MyPortfolio/MyPortfolio';
+import Users from './Dashboard/Users';
 
 
 
@@ -37,6 +38,7 @@ function App() {
           <Route index element={<MyOrder></MyOrder>}></Route>
           <Route path='review' element={<UserReview></UserReview>}></Route>
           <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
+          <Route path='makeadmin' element={<Users></Users>}></Route>
         </Route>
         <Route path='/purchase/' element={<AllAvailableTools></AllAvailableTools>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
