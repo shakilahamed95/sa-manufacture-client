@@ -21,6 +21,7 @@ const Purshes = () => {
     const handlePurses = event => {
         event.preventDefault();
         const tool = event.target.quantity.value;
+        const toolsnumber = parseInt(tool)
         const order = {
             productId: tooldetails._id,
             name: tooldetails.name,
@@ -29,14 +30,16 @@ const Purshes = () => {
             address: event.target.address.value,
             phone: event.target.phone.value,
             tool: event.target.quantity.value,
-            totalMoney: parseInt(tool) * parseInt(tooldetails.price)
+            totalMoney: toolsnumber * tooldetails.price
+
         }
+        // console.log(totalMoney);
         if (tool < tooldetails.minimum) {
             return toast(`you must order minimum ${tooldetails.minimum} set`)
 
         }
         else if (tool > tooldetails.quantity) {
-            console.log(tooldetails.quantity);
+
             return toast('Sorry we do not have available quantity please order less quantity')
         }
         else {

@@ -9,7 +9,9 @@ const Navbar = () => {
     const [user] = useAuthState(auth);
     const handleSignout = () => {
         signOut(auth)
+        localStorage.removeItem('accessToken')
     }
+
 
     const menu = <>
         <li><Link to='/'>Home</Link></li>
@@ -23,7 +25,9 @@ const Navbar = () => {
                 <li><p>{user.displayName}</p></li>
             </>
             : <li><Link to="/login">Login</Link></li>}
+        <li><Link to='/myportfolio'>My Portfolio</Link></li>
     </>
+
 
     return (
         <div class="navbar bg-base-100">

@@ -14,6 +14,7 @@ import Dashboard from './Dashboard/Dashboard';
 import MyOrder from './Dashboard/MyOrder';
 import UserReview from './Dashboard/UserReview';
 import MyProfile from './Dashboard/MyProfile';
+import MyPortfolio from './MyPortfolio/MyPortfolio';
 
 
 
@@ -40,6 +41,7 @@ function App() {
         <Route path='/purchase/' element={<AllAvailableTools></AllAvailableTools>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <ToastContainer />
