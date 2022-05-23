@@ -21,6 +21,7 @@ import ManageOrders from './Dashboard/ManageOrders';
 import ManageProducts from './Dashboard/ManageProducts';
 import AddProduct from './Dashboard/AddProduct';
 import RequireUser from './Shared/RequireUser';
+import Payment from './Dashboard/Payment';
 
 
 
@@ -46,6 +47,9 @@ function App() {
           }></Route>
           <Route path='myorder' element={
             <RequireUser><MyOrder></MyOrder></RequireUser>
+          }></Route>
+          <Route path='payment/:id' element={
+            <RequireUser><Payment></Payment></RequireUser>
           }></Route>
           <Route path='makeadmin' element={<RequireAdmin>
             <Users></Users>
