@@ -10,6 +10,7 @@ const Purshes = () => {
     const [user] = useAuthState(auth);
     const { id } = useParams()
     const [tooldetails, setTooldetails] = useState({})
+    const [error, setError] = useState('')
     useEffect(() => {
         const url = `http://localhost:5000/tools/${id}`;
         fetch(url)
@@ -17,6 +18,16 @@ const Purshes = () => {
             .then(data => setTooldetails(data))
 
     }, [tooldetails])
+
+    const handlequantityblur = event => {
+        const userquantity = event.target.value;
+        console.log(userquantity);
+        if (parseInt(userquantity) < parseInt(tooldetails.minimum) || userquantity > tooldetails.quantity) {
+            setError('purse at least minimum quantity and less then available quqntity')
+            console.log(userquantity, tooldetails.minimum);
+        }
+        else { setError('') }
+    }
 
     const handlePurses = event => {
         event.preventDefault();
@@ -33,46 +44,35 @@ const Purshes = () => {
             totalMoney: toolsnumber * tooldetails.price
 
         }
-        // console.log(totalMoney);
-        if (tool < tooldetails.minimum) {
-            return toast(`you must order minimum ${tooldetails.minimum} set`)
-
-        }
-        else if (tool > tooldetails.quantity) {
-
-            return toast('Sorry we do not have available quantity please order less quantity')
-        }
-        else {
-            fetch('http://localhost:5000/orders', {
-                method: "POST",
-                headers: {
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify(order)
+        fetch('http://localhost:5000/orders', {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(data => {
+                event.target.reset();
+                toast.success("Your order has been booked. Please pay for further process")
             })
-                .then(res => res.json())
-                .then(data => {
-                    event.target.reset();
-                    toast.success("Your order has been booked. Please pay for further process")
-                })
-            const { quantity } = tooldetails;
-            const orderquantity = (event.target.quantity.value)
-            const orderquantityNumber = parseInt(orderquantity)
-            let newQuantity = (quantity) - orderquantityNumber
-            const updatedQuantity = { ...tooldetails, quantity: newQuantity }
-            setTooldetails(updatedQuantity)
-            const url = `http://localhost:5000/tools/${id}`;
-            fetch(url, {
-                method: 'PUT',
-                headers: {
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify(updatedQuantity)
+        const { quantity } = tooldetails;
+        const orderquantity = (event.target.quantity.value)
+        const orderquantityNumber = parseInt(orderquantity)
+        let newQuantity = (quantity) - orderquantityNumber
+        const updatedQuantity = { ...tooldetails, quantity: newQuantity }
+        setTooldetails(updatedQuantity)
+        const url = `http://localhost:5000/tools/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedQuantity)
+        })
+            .then(res => res.json())
+            .then(data => {
             })
-                .then(res => res.json())
-                .then(data => {
-                })
-        }
 
 
     }
@@ -93,9 +93,17 @@ const Purshes = () => {
                             <input type="text" name='email' disabled value={user?.email} class="input input-bordered w-full max-w-xs" />
                             <input type="text" name='address' placeholder="Please enter your address" class="input input-bordered w-full max-w-xs" />
                             <input type="text" name='phone' placeholder=" Your phone number" class="input input-bordered w-full max-w-xs" />
-                            <input type="text" name='quantity' placeholder=" Enter your quantity" class="input input-bordered w-full max-w-xs" />
+                            <input type="number" name='quantity' onChange={handlequantityblur} placeholder="Enter your quantity" class="input input-bordered w-full max-w-xs" />
                             <br />
-                            <button class="btn btn-outline btn-primary">submit</button>
+                            {
+                                error ?
+                                    <>
+                                        <p className='text-red-500 text-center'>{error}</p>
+                                        <button disabled class="btn btn-outline btn-primary">submit</button>
+                                    </> :
+                                    <button class="btn btn-outline btn-primary">submit</button>
+                            }
+
                         </form>
                     </div>
                 </div>
