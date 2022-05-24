@@ -22,6 +22,7 @@ import ManageProducts from './Dashboard/ManageProducts';
 import AddProduct from './Dashboard/AddProduct';
 import RequireUser from './Shared/RequireUser';
 import Payment from './Dashboard/Payment';
+import UpdateProfile from './Dashboard/UpdateProfile';
 
 
 
@@ -42,6 +43,7 @@ function App() {
           </RequireAuth>
         }>
           <Route index element={<MyProfile></MyProfile>}></Route>
+          <Route path='updateprofile' element={<UpdateProfile></UpdateProfile>}></Route>
           <Route path='review' element={
             <RequireUser><UserReview></UserReview></RequireUser>
           }></Route>
