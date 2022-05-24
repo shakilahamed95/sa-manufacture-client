@@ -13,7 +13,7 @@ const UserReview = () => {
             setRatingError("please provide a number grater then 0")
         }
         else if (ratingvalue >= 5) {
-            setRatingError("please provide a number smaller then 0")
+            setRatingError("please provide a number smaller then 5")
         }
         else {
             const review = {
