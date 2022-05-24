@@ -9,7 +9,7 @@ const MyProfile = () => {
     const email = user.email;
     const [singleuser, setSingleuser] = useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/user/${email}`)
+        fetch(`https://powerful-sands-85071.herokuapp.com/user/${email}`)
             .then(res => res.json())
             .then(data => setSingleuser(data))
     }, [singleuser])
@@ -25,7 +25,7 @@ const MyProfile = () => {
         const updatedUser = { education: education, location: location, phone: phone, linkdin: linkdin, img: img }
 
         // send data to the server
-        const url = `http://localhost:5000/user/updateprofile/${email}`;
+        const url = `https://powerful-sands-85071.herokuapp.com/user/updateprofile/${email}`;
         fetch(url, {
             method: 'PUT',
             headers: {

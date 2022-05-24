@@ -13,7 +13,7 @@ const UserReview = () => {
             setRatingError("please provide a number grater then 0")
         }
         else if (ratingvalue >= 5) {
-            setRatingError("please provide a number smaller then 5")
+            setRatingError("please provide rating smaller or equal 5")
         }
         else {
             const review = {
@@ -22,7 +22,7 @@ const UserReview = () => {
                 ratings: event.target.rating.value,
                 image: event.target.image.value
             }
-            fetch('http://localhost:5000/review', {
+            fetch('https://powerful-sands-85071.herokuapp.com/review', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',

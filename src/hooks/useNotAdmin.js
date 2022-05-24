@@ -6,7 +6,7 @@ const useNotAdmin = user => {
     useEffect(() => {
         const email = user?.email;
         if (email) {
-            fetch(`http://localhost:5000/notadmin/${email}`, {
+            fetch(`https://powerful-sands-85071.herokuapp.com/notadmin/${email}`, {
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',

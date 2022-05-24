@@ -8,8 +8,8 @@ const SingleTool = ({ tool }) => {
         navigate(`/purchase/${_id}`)
     }
     return (
-        <div class="card card-compact lg:max-w-lg bg-base-100 shadow-xl">
-            <figure><img style={{ width: "300px", height: "300px" }} src={img} alt="Shoes" /></figure>
+        <div class="card card-compact lg:max-w-md bg-base-100 shadow-xl">
+            <figure><img style={{ width: "250px", height: "250px" }} src={img} alt="Shoes" /></figure>
             <div class="card-body">
                 <h2 class="text-primary text-center text-3xl">{name}</h2>
                 <p>{description}</p>

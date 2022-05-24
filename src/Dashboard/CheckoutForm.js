@@ -1,15 +1,15 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
 
-const CheckoutForm = ({ order }) => {
+const CheckoutForm = (order) => {
     const stripe = useStripe();
     const elements = useElements();
     const [cardError, setCardError] = useState('');
     const [clientSecret, setClientSecret] = useState('');
-    const { userName, email, totalMoney } = order;
+    const { totalMoney } = order;
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://powerful-sands-85071.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -22,7 +22,7 @@ const CheckoutForm = ({ order }) => {
                     setClientSecret(data.clientSecret);
                 }
             })
-    }, [totalMoney])
+    }, [])
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -58,7 +58,7 @@ const CheckoutForm = ({ order }) => {
                         },
                     }}
                 />
-                <button className='btn btn-primary btn-sm mt-4' type="submit" disabled={!stripe || clientSecret}>
+                <button className='btn btn-success btn-sm mt-4' type="submit" disabled={!stripe || !clientSecret}>
                     Pay
                 </button>
             </form>

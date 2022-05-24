@@ -9,8 +9,8 @@ const Experts = () => {
         <div>
             <h1 className='text-primary text-center text-3xl font-bold my-6 '>Our Team Members</h1>
             <div>
-                <div className='mx-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
-                    <div class="card lg:max-w-lg bg-base-100 shadow-xl">
+                <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                    <div class="card lg:max-w-md bg-base-100 shadow-xl">
                         <figure><div class="avatar">
                             <div class="w-48 rounded">
                                 <img src={ceo} alt='' />

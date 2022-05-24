@@ -3,11 +3,11 @@ import { loadStripe } from '@stripe/stripe-js';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import CheckoutForm from './CheckoutForm';
-const stripePromise = loadStripe('pk_test_51L0X15GM6Ak3ZGCwHJueygHsNS8zU2tNGTzUADgYJxyOJ8K2IVMSd1GhCyh78sgD56fOjJ1eEYheGvaPp4MO8f8300vhTvgfGT');
+const stripePromise = loadStripe('pk_test_51L33xBC3nBkoQQAc2PKByUKl53EYe7IK9O7RiRfnAWG0Mk8h5jtYhyuJPC7kSIn2XApFXTH70aC5Ep3XsHqNXkAw0048rcsp8p');
 
 const Payment = () => {
     const { id } = useParams()
-    const url = `http://localhost:5000/orders/${id}`
+    const url = `https://powerful-sands-85071.herokuapp.com/orders/${id}`
     const [order, setOrder] = useState({})
     useEffect(() => {
         fetch(url)

@@ -12,7 +12,7 @@ const MyOrder = () => {
     const [deleting, setDeleting] = useState(null)
 
     const handleDelete = email => {
-        fetch(`http://localhost:5000/orders/${email}`, {
+        fetch(`https://powerful-sands-85071.herokuapp.com/orders/${email}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -26,7 +26,7 @@ const MyOrder = () => {
     }
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/orders?email=${email}`)
+            fetch(`https://powerful-sands-85071.herokuapp.com/orders?email=${email}`)
                 .then(res => res.json())
                 .then(data => setOrders(data))
         }

@@ -3,7 +3,7 @@ import React from 'react';
 const UpdateProfile = ({ user, singleuser }) => {
     return (
         <div >
-            <h1 className='text-2xl text-center text-primary mb-6'>Your Profile</h1>
+            <h1 className='text-2xl text-center mr-12 text-primary mb-6'>Your Profile</h1>
             <div class="card lg:max-w-lg md:max-w-md bg-base-100 shadow-xl">
                 {
                     singleuser.img ?

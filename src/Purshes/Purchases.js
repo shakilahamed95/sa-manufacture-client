@@ -12,7 +12,7 @@ const Purshes = () => {
     const [tooldetails, setTooldetails] = useState({})
     const [error, setError] = useState('')
     useEffect(() => {
-        const url = `http://localhost:5000/tools/${id}`;
+        const url = `https://powerful-sands-85071.herokuapp.com/tools/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setTooldetails(data))
@@ -44,7 +44,7 @@ const Purshes = () => {
             totalMoney: toolsnumber * tooldetails.price
 
         }
-        fetch('http://localhost:5000/orders', {
+        fetch('https://powerful-sands-85071.herokuapp.com/orders', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -62,7 +62,7 @@ const Purshes = () => {
         let newQuantity = (quantity) - orderquantityNumber
         const updatedQuantity = { ...tooldetails, quantity: newQuantity }
         setTooldetails(updatedQuantity)
-        const url = `http://localhost:5000/tools/${id}`;
+        const url = `https://powerful-sands-85071.herokuapp.com/tools/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

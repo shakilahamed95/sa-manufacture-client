@@ -12,7 +12,7 @@ const Alltools = () => {
     return (
         <div className='bg-base-100 my-8'>
             <h1 className='text-3xl text-primary text-center font-bold my-6'> Available Tools </h1>
-            <div className='mx-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+            <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
                     tools.map(tool => <SingleTool
                         key={tool._id}
