@@ -1,14 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
-const ManageSingleOrder = ({ order, index }) => {
-    const { userName, name, status, paid } = order;
+const ManageSingleOrder = ({ order, index, refetch, setDeleteOrder }) => {
+    const { userName, name, status, _id } = order;
+
+    const handleDelete = () => {
+
+    }
+
+    const handleShiped = () => {
+        fetch(`http://localhost:5000/order/${_id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            },
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                toast.success('You have Successfully shiped the order')
+                refetch()
+
+            })
+    }
+
     return (
         <tr>
             <th>{index + 1}</th>
             <td>{userName}</td>
             <td>{name}</td>
-            <td>{status ? <p className='text-blue-500 '>{status}</p> : <p className='text-red-500 '>Unpaid</p>}</td>
-            <td>to</td>
+            <td>{status ? <p className='text-blue-500'>{status}</p> : <p className='text-red-500 '>Unpaid</p>}</td>
+            <td>{status ? <button id='ship' onClick={handleShiped} di class="btn btn-sm btn-primary">Shipping?</button> : <>
+                <label onClick={() => setDeleteOrder(order)} for="order-delete-confirmation" class="btn btn-sm">Delete</label>
+            </>}</td>
         </tr>
     );
 };

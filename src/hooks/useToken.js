@@ -9,7 +9,8 @@ const useToken = user => {
             fetch(`https://powerful-sands-85071.herokuapp.com/user/${email}`, {
                 method: 'PUT',
                 headers: {
-                    'content-type': 'application/json'
+                    'content-type': 'application/json',
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
                 },
                 body: JSON.stringify(currentUser)
             })

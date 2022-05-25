@@ -8,12 +8,14 @@ import Expert from './Expert';
 const Experts = () => {
     return (
 
-        <div>
+        <div className='container'>
             <h1 className='text-center text-primary text-3xl mt-10'>Our Team Member</h1>
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 mb-20 '>
-                <Expert name='Eng Omar yeamin' post='CEO & Founder' img={ceo}></Expert>
-                <Expert name='Eng Adam Meir' post='Production Manager' img={manager}></Expert>
-                <Expert name='Eng Jack Farnes' post='Head Mechanics' img={employee}></Expert>
+            <div className='container mx-auto'>
+                <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 mb-20 '>
+                    <Expert name='Eng Omar yeamin' post='CEO & Founder' img={ceo}></Expert>
+                    <Expert name='Eng Adam Meir' post='Production Manager' img={manager}></Expert>
+                    <Expert name='Eng Jack Farnes' post='Head Mechanics' img={employee}></Expert>
+                </div>
             </div>
         </div>
     );

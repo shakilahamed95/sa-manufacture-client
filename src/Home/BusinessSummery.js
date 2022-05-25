@@ -12,10 +12,10 @@ const BusinessSummery = () => {
         AOS.init();
     })
     return (
-        <div>
+        <div className='container max-w-2xl'>
             <h1 className='text-center text-primary text-3xl my-6'>Business Summery</h1>
-            <div className='mx-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 '>
-                <div className='card lg:card-side bg-emerald-100 shadow-xl' data-aos='fade-right'
+            <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 '>
+                {/* <div className='card lg:card-side bg-emerald-100 shadow-xl' data-aos='fade-right'
                     data-aos-duration='1000'
                     data-aos-delay='200'>
                     <div class="avatar">
@@ -28,7 +28,7 @@ const BusinessSummery = () => {
                         <h2 className="text-2xl text-center">3500 Happy Customer</h2>
 
                     </div>
-                </div>
+                </div> */}
                 <div className='card lg:card-side shadow-xl  bg-emerald-100' data-aos='fade-down'
                     data-aos-duration='1000'
                     data-aos-delay='200'>
