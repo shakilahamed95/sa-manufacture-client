@@ -67,7 +67,7 @@ const CheckoutForm = ({ order }) => {
             setSuccess('Thank You ! Your payment is completed.')
             const payment = {
                 orderinfo: _id,
-                transactionId: paymentIntent.id
+                transactionId: paymentIntent.id,
             }
 
             fetch(`http://localhost:5000/orders/${_id}`, {

@@ -18,7 +18,7 @@ const ManageOrders = () => {
                             <th>Index</th>
                             <th>Name</th>
                             <th>Product Name</th>
-                            <th>Total Money</th>
+                            <th>Payment</th>
                             <th>Status</th>
                         </tr>
                     </thead>
