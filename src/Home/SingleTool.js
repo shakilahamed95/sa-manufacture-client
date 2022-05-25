@@ -8,16 +8,16 @@ const SingleTool = ({ tool }) => {
         navigate(`/purchase/${_id}`)
     }
     return (
-        <div class="card card-compact lg:max-w-md bg-base-100 shadow-xl">
+        <div className="card card-compact lg:max-w-md bg-base-100 shadow-xl">
             <figure><img style={{ width: "250px", height: "250px" }} src={img} alt="Shoes" /></figure>
-            <div class="card-body">
-                <h2 class="text-primary text-center text-3xl">{name}</h2>
+            <div className="card-body">
+                <h2 className="text-primary text-center text-3xl">{name}</h2>
                 <p>{description}</p>
                 <h3 className='text-xl'> Price Tk:{price}</h3>
                 <h3 className='text-xl'> Available:{quantity}</h3>
                 <h3 className='text-xl'>Minimum Order:{minimum}</h3>
-                <div class="card-actions justify-center">
-                    <button onClick={() => handleNavigate(_id)} class="btn btn-primary">Purches Now</button>
+                <div className="card-actions justify-center">
+                    <button onClick={() => handleNavigate(_id)} className="btn btn-primary">Purches Now</button>
                 </div>
             </div>
         </div>

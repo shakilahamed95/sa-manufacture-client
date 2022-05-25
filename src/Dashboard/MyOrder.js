@@ -36,8 +36,8 @@ const MyOrder = () => {
         <div>
             <h1 className='text-2xl text-primary'> You Have {orders.length} Orders</h1>
 
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
 
                     <thead>
                         <tr>

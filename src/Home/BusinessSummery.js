@@ -18,8 +18,8 @@ const BusinessSummery = () => {
                 {/* <div className='card lg:card-side bg-emerald-100 shadow-xl' data-aos='fade-right'
                     data-aos-duration='1000'
                     data-aos-delay='200'>
-                    <div class="avatar">
-                        <div class="w-24 rounded-xl">
+                    <div className="avatar">
+                        <div className="w-24 rounded-xl">
                             <img src={customer} alt='' />
                         </div>
                     </div>
@@ -32,8 +32,8 @@ const BusinessSummery = () => {
                 <div className='card lg:card-side shadow-xl  bg-emerald-100' data-aos='fade-down'
                     data-aos-duration='1000'
                     data-aos-delay='200'>
-                    <div class="avatar">
-                        <div class="w-24 rounded-xl">
+                    <div className="avatar">
+                        <div className="w-24 rounded-xl">
                             <img src={country} alt='' />
                         </div>
                     </div>
@@ -46,8 +46,8 @@ const BusinessSummery = () => {
                 <div className='card lg:card-side bg-emerald-100 shadow-xl' data-aos='fade-up'
                     data-aos-duration='1000'
                     data-aos-delay='600'>
-                    <div class="avatar">
-                        <div class="w-24 rounded-xl">
+                    <div className="avatar">
+                        <div className="w-24 rounded-xl">
                             <img src={happy} alt='' />
                         </div>
                     </div>
@@ -60,8 +60,8 @@ const BusinessSummery = () => {
                 <div className='card lg:card-side bg-emerald-100 shadow-xl' data-aos='fade-left'
                     data-aos-duration='1000'
                     data-aos-delay='800'>
-                    <div class="avatar">
-                        <div class="w-24 rounded-xl">
+                    <div className="avatar">
+                        <div className="w-24 rounded-xl">
                             <img src={annual} alt='' />
                         </div>
                     </div>

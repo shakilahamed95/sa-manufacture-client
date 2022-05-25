@@ -42,16 +42,16 @@ const UserReview = () => {
         <div>
             <h1 className='text-primary text-center text-2xl'>Please Give A review</h1>
             <div className='flex justify-center items-center'>
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <div class="card-body">
+                <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card-body">
                         <form onSubmit={handleReview} className='grid grid-cols-1 gap-3 justify-items-center mt-2'>
-                            <input type="text" name='name' disabled value={user?.displayName} class="input input-bordered w-full max-w-xs" />
-                            <input type="text" name='email' disabled value={user?.email} class="input input-bordered w-full max-w-xs" />
-                            <input type="number" name='rating' placeholder="Please enter your rating value from 1 to 5" class="input input-bordered w-full max-w-xs" />
+                            <input type="text" name='name' disabled value={user?.displayName} className="input input-bordered w-full max-w-xs" />
+                            <input type="text" name='email' disabled value={user?.email} className="input input-bordered w-full max-w-xs" />
+                            <input type="number" name='rating' placeholder="Please enter your rating value from 1 to 5" className="input input-bordered w-full max-w-xs" />
                             {
                                 ratingerror ? <p className='text-red-500'>{ratingerror}</p> : ''
                             }
-                            <input type="text" name='image' placeholder=" Enter your image url" class="input input-bordered w-full max-w-xs" />
+                            <input type="text" name='image' placeholder=" Enter your image url" className="input input-bordered w-full max-w-xs" />
                             <textarea
                                 className='textarea input-bordered w-full max-w-xs'
                                 name='text'
@@ -59,7 +59,7 @@ const UserReview = () => {
                                 rows={5}
                             ></textarea>
                             <br />
-                            <button class="btn btn-outline btn-primary">submit</button>
+                            <button className="btn btn-outline btn-primary">submit</button>
                         </form>
                     </div>
                 </div>

@@ -42,13 +42,6 @@ const Login = () => {
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password);
     }
-    // const handleResetPassword = data => {
-    //     sendPasswordResetEmail(auth, data.email)
-    //         .then(() => {
-    //             console.log(data.email);
-    //             toast('A Email is sent to your emailaddress for reset password request ')
-    //         })
-    // }
 
     return (
         <div>
@@ -111,7 +104,6 @@ const Login = () => {
                             {signInError}
                             <input className='btn w-full max-w-xs text-white' type="submit" value="Login" />
                         </form>
-                        {/* <p>Forget password? <small onClick={handleResetPassword} style={{ cursor: "pointer" }} className='text-primary' >Reset Your password</small></p> */}
                         <p>New to Doctors Portal <small><Link className='text-primary' to="/signup">Create New Account</Link></small></p>
                         <div className="divider">OR</div>
                         <button

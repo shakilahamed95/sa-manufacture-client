@@ -9,7 +9,7 @@ const ManageSingleOrder = ({ order, index, refetch, setDeleteOrder }) => {
     }
 
     const handleShiped = () => {
-        fetch(`http://localhost:5000/order/${_id}`, {
+        fetch(`https://powerful-sands-85071.herokuapp.com/order/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
@@ -31,8 +31,8 @@ const ManageSingleOrder = ({ order, index, refetch, setDeleteOrder }) => {
             <td>{userName}</td>
             <td>{name}</td>
             <td>{status ? <p className='text-blue-500'>{status}</p> : <p className='text-red-500 '>Unpaid</p>}</td>
-            <td>{status ? <button id='ship' onClick={handleShiped} di class="btn btn-sm btn-primary">Shipping?</button> : <>
-                <label onClick={() => setDeleteOrder(order)} for="order-delete-confirmation" class="btn btn-sm">Delete</label>
+            <td>{status ? <button id='ship' onClick={handleShiped} di className="btn btn-sm btn-primary">Shipping?</button> : <>
+                <label onClick={() => setDeleteOrder(order)} for="order-delete-confirmation" className="btn btn-sm">Delete</label>
             </>}</td>
         </tr>
     );

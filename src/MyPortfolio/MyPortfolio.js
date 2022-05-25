@@ -8,11 +8,11 @@ const MyPortfolio = () => {
         <div>
             <Navbar></Navbar>
             <div className='flex justify-center'>
-                <div class="card lg:max-w-lg bg-base-100 shadow-xl">
-                    <figure class="px-10 pt-10">
-                        <img src={myimg} alt="Shoes" class="rounded-xl" />
+                <div className="card lg:max-w-lg bg-base-100 shadow-xl">
+                    <figure className="px-10 pt-10">
+                        <img src={myimg} alt="Shoes" className="rounded-xl" />
                     </figure>
-                    <div class="card-body">
+                    <div className="card-body">
                         <h2 className='text-2xl text-black text-center'> Name:Md.Shakil Ahamed</h2>
                         <h2 className='text-2xl text-black text-center'> Email:shakilahamed.ict.iu@gmail.com</h2>
                         <h2 className='text-2xl text-black text-center'> My Skills:React,Nodejs,Mongodb,Express js,Bootstrap,Tailwind</h2>
@@ -24,7 +24,7 @@ const MyPortfolio = () => {
             </div>
             <div>
                 <h2 className='text-3xl text-primary text-center mt-6'>Educational background</h2>
-                <table class="table w-full my-5">
+                <table className="table w-full my-5">
 
                     <thead>
                         <tr>

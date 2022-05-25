@@ -13,7 +13,7 @@ const Users = () => {
         <div>
             <h1 className='text-primary text-center text-2xl'> We have {users.length} Users</h1>
 
-            <table class="table w-full">
+            <table className="table w-full">
 
                 <thead>
                     <tr>

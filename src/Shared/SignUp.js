@@ -2,6 +2,7 @@ import React from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../firebase.init';
 import useToken from '../hooks/useToken';
 import Footer from './Footer';
@@ -35,7 +36,9 @@ const SignUp = () => {
     }
 
     if (token) {
+
         navigate('/');
+        toast("An email has sent to your account please verify it.")
     }
 
     const onSubmit = async data => {

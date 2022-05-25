@@ -55,13 +55,13 @@ const MyProfile = () => {
             <div className='card lg:max-w-lg md:max-w-md bg-base-100 shadow-xl'>
                 <h1 className='text-primary text-center text-2xl'>Update Your Profile {user.displayName}</h1>
                 <form onSubmit={handleUpdateUser} className='grid grid-cols-1 gap-3 justify-items-center mt-2'>
-                    <input type="text" name='education' placeholder=" Enter your education level" class="input input-bordered w-full max-w-xs" />
-                    <input type="text" name='location' placeholder=" Enter your location" class="input input-bordered w-full max-w-xs" />
-                    <input type="text" name='phone' placeholder="Enter your phone number" class="input input-bordered w-full max-w-xs" />
-                    <input type="text" name='linkdin' placeholder="Enter your LinkedIn profile link" class="input input-bordered w-full max-w-xs" />
-                    <input type="text" name='image' placeholder=" Enter your image url" class="input input-bordered w-full max-w-xs" />
+                    <input type="text" name='education' placeholder=" Enter your education level" className="input input-bordered w-full max-w-xs" />
+                    <input type="text" name='location' placeholder=" Enter your location" className="input input-bordered w-full max-w-xs" />
+                    <input type="text" name='phone' placeholder="Enter your phone number" className="input input-bordered w-full max-w-xs" />
+                    <input type="text" name='linkdin' placeholder="Enter your LinkedIn profile link" className="input input-bordered w-full max-w-xs" />
+                    <input type="text" name='image' placeholder=" Enter your image url" className="input input-bordered w-full max-w-xs" />
                     <br />
-                    <button class="btn btn-outline btn-primary">submit</button>
+                    <button className="btn btn-outline btn-primary">submit</button>
                 </form>
             </div>
 

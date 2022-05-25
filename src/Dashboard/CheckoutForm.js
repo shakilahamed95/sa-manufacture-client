@@ -13,7 +13,7 @@ const CheckoutForm = ({ order }) => {
 
     useEffect(() => {
         if (totalMoney) {
-            fetch('http://localhost:5000/create-payment-intent', {
+            fetch('https://powerful-sands-85071.herokuapp.com/create-payment-intent', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
@@ -70,7 +70,7 @@ const CheckoutForm = ({ order }) => {
                 transactionId: paymentIntent.id,
             }
 
-            fetch(`http://localhost:5000/orders/${_id}`, {
+            fetch(`https://powerful-sands-85071.herokuapp.com/orders/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

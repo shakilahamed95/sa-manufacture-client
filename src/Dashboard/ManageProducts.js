@@ -6,14 +6,14 @@ import ManageSingleProducts from './ManageSingleProducts';
 
 const ManageProducts = () => {
     const [adminDelete, setAdminDelete] = useState(null)
-    const { data: tools, isLoading, refetch } = useQuery('allproduct', () => fetch('http://localhost:5000/tools').then(res => res.json()))
+    const { data: tools, isLoading, refetch } = useQuery('allproduct', () => fetch('https://powerful-sands-85071.herokuapp.com/tools').then(res => res.json()))
     if (isLoading) {
         return <Loading></Loading>
     }
     return (
         <div>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                     <thead>
                         <tr>
                             <th>Index</th>

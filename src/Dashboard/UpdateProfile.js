@@ -4,17 +4,17 @@ const UpdateProfile = ({ user, singleuser }) => {
     return (
         <div >
             <h1 className='text-2xl text-center mr-12 text-primary mb-6'>Your Profile</h1>
-            <div class="card lg:max-w-lg md:max-w-md bg-base-100 shadow-xl">
+            <div className="card lg:max-w-lg md:max-w-md bg-base-100 shadow-xl">
                 {
                     singleuser.img ?
                         <>
-                            <figure class="px-10 pt-10">
-                                <img src={singleuser.img} alt="Shoes" class="rounded-xl" />
+                            <figure className="px-10 pt-10">
+                                <img src={singleuser.img} alt="Shoes" className="rounded-xl" />
                             </figure>
                         </> :
                         ''
                 }
-                <div class="card-body items-center text-center">
+                <div className="card-body items-center text-center">
                     <h2 className='text-2xl text-black'>Your Name:{user.displayName}</h2>
                     <h2 className='text-2xl text-black'>Your Email:{user.email}</h2>
 

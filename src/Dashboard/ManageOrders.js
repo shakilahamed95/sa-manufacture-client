@@ -6,7 +6,7 @@ import OrderDeleteConfirmation from './OrderDeleteConfirmation';
 
 const ManageOrders = () => {
     const [deleteOrder, setDeleteOrder] = useState(null)
-    const { data: orders, isLoading, refetch } = useQuery('allOrder', () => fetch('http://localhost:5000/allorders').then(res => res.json()))
+    const { data: orders, isLoading, refetch } = useQuery('allOrder', () => fetch('https://powerful-sands-85071.herokuapp.com/allorders').then(res => res.json()))
     if (isLoading) {
         return <Loading></Loading>
     }
@@ -14,9 +14,9 @@ const ManageOrders = () => {
     return (
         <div>
             <div>
-                <div class="overflow-x-auto">
+                <div className="overflow-x-auto">
                     <h1 className='text-3xl text-primary text-center mb-8'>All Orders</h1>
-                    <table class="table w-full">
+                    <table className="table w-full">
 
                         <thead>
                             <tr>

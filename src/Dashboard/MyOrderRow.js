@@ -17,8 +17,8 @@ const MyOrderRow = ({ order, index, setDeleting }) => {
             </td>
             <td>
                 {
-                    order.paid ? <><button disabled onClick={() => setDeleting(order)} for="delete-confirm" class="btn modal-button">Cancel Order</button></> :
-                        <> <label onClick={() => setDeleting(order)} for="delete-confirm" class="btn modal-button">Cancel Order</label></>
+                    order.paid ? <><button disabled onClick={() => setDeleting(order)} for="delete-confirm" className="btn modal-button">Cancel Order</button></> :
+                        <> <label onClick={() => setDeleting(order)} for="delete-confirm" className="btn modal-button">Cancel Order</label></>
                 }
             </td>
         </tr>
