@@ -21,10 +21,8 @@ const Purshes = () => {
 
     const handlequantityblur = event => {
         const userquantity = event.target.value;
-        console.log(userquantity);
         if (parseInt(userquantity) < parseInt(tooldetails.minimum) || userquantity > tooldetails.quantity) {
             setError('purse at least minimum quantity and less then available quqntity')
-            console.log(userquantity, tooldetails.minimum);
         }
         else { setError('') }
     }
