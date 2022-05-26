@@ -16,6 +16,7 @@ const UserReview = () => {
             setRatingError("please provide rating smaller or equal 5")
         }
         else {
+            setRatingError('')
             const review = {
                 user: event.target.name.value,
                 text: event.target.text.value,
