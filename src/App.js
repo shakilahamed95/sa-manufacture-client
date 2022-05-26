@@ -23,6 +23,7 @@ import AddProduct from './Dashboard/AddProduct';
 import RequireUser from './Shared/RequireUser';
 import Payment from './Dashboard/Payment';
 import UpdateProfile from './Dashboard/UpdateProfile';
+import Blogs from './Blogs/Blogs';
 
 
 
@@ -32,6 +33,7 @@ function App() {
     <div>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/purchase/:id' element={
           <RequireAuth>
             <Purshes></Purshes>

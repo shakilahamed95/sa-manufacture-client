@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { toast } from 'react-toastify';
 import auth from '../firebase.init';
 import DeleteConfirm from './DeleteConfirm';
 import MyOrderRow from './MyOrderRow';
@@ -11,26 +10,14 @@ const MyOrder = () => {
     const email = user.email;
     const [deleting, setDeleting] = useState(null)
 
-    const handleDelete = email => {
-        fetch(`https://powerful-sands-85071.herokuapp.com/orders/${email}`, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount > 0) {
-                    setDeleting(null)
-                    toast.success('You have Successfully Deleted an item')
-                }
-            })
 
-    }
     useEffect(() => {
         if (user) {
             fetch(`https://powerful-sands-85071.herokuapp.com/orders?email=${email}`)
                 .then(res => res.json())
                 .then(data => setOrders(data))
         }
-    }, [user, handleDelete])
+    }, [user, deleting])
 
     return (
         <div>
@@ -64,8 +51,8 @@ const MyOrder = () => {
             {
                 deleting && <DeleteConfirm
                     deleting={deleting}
-                    handleDelete={handleDelete}
                     email={email}
+                    setDeleting={setDeleting}
                 ></DeleteConfirm>
             }
         </div>

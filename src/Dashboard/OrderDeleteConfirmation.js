@@ -30,7 +30,7 @@ const OrderDeleteConfirmation = ({ deleteOrder, refetch, setDeleteOrder }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

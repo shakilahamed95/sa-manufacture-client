@@ -1,8 +1,8 @@
 import React from 'react';
-import { toast } from 'react-toastify';
+
 
 const ManageSingleProducts = ({ tool, index, setAdminDelete }) => {
-    const { name, quantity, price, _id } = tool
+    const { name, quantity, price } = tool
 
     return (
         <tr>

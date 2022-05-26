@@ -1,12 +1,7 @@
-import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
 const ManageSingleOrder = ({ order, index, refetch, setDeleteOrder }) => {
     const { userName, name, status, _id } = order;
-
-    const handleDelete = () => {
-
-    }
 
     const handleShiped = () => {
         fetch(`https://powerful-sands-85071.herokuapp.com/order/${_id}`, {

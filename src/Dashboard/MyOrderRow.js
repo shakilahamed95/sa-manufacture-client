@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const MyOrderRow = ({ order, index, setDeleting }) => {
+
+
     return (
         <tr>
             <th>{index + 1}</th>
