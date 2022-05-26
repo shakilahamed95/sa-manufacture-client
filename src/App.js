@@ -24,10 +24,16 @@ import RequireUser from './Shared/RequireUser';
 import Payment from './Dashboard/Payment';
 import UpdateProfile from './Dashboard/UpdateProfile';
 import Blogs from './Blogs/Blogs';
+import React, { useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  })
 
   return (
     <div>
