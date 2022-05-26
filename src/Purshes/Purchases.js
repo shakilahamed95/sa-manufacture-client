@@ -79,7 +79,7 @@ const Purshes = () => {
             <Navbar></Navbar>
             <div className='mx-12 mt-6 flex justify-center gap-6 items-center my-6'>
                 <div className="card card-compact lg:max-w-lg bg-base-100 shadow-xl">
-                    <figure><img style={{ width: "300px", height: "300px" }} src={tooldetails.img} alt="Shoes" /></figure>
+                    <figure><img style={{ width: "300px", height: "300px" }} src={tooldetails.img} alt="tools" /></figure>
                     <div className="card-body">
                         <h2 className="text-primary text-center text-3xl">{tooldetails.name}</h2>
                         <p>{tooldetails.description}</p>

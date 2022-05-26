@@ -9,7 +9,7 @@ const Experts = () => {
     return (
 
         <div className='container lg:mt-[-160px]'>
-            <h1 className='text-center text-primary text-3xl mt-10'>Our Team Member</h1>
+            <h1 className='text-center text-primary text-3xl mt-10 font-bold'>Our Team Member</h1>
             <div className='container mx-auto'>
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 mb-20 '>
                     <Expert name='Eng Omar yeamin' post='CEO & Founder' img={ceo}></Expert>

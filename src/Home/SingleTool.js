@@ -17,7 +17,7 @@ const SingleTool = ({ tool }) => {
                 <h3 className='text-xl'> Available:{quantity}</h3>
                 <h3 className='text-xl'>Minimum Order:{minimum}</h3>
                 <div className="card-actions justify-center">
-                    <button onClick={() => handleNavigate(_id)} className="btn btn-primary">Purches Now</button>
+                    <button onClick={() => handleNavigate(_id)} className="btn btn-primary">Buy Now</button>
                 </div>
             </div>
         </div>

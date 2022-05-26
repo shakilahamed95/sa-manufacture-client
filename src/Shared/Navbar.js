@@ -21,7 +21,7 @@ const Navbar = () => {
         }
         {user ?
             <>
-                <p className="btn btn-ghost" onClick={handleSignout} >Log Out</p>
+                <p className="btn btn-ghost normal-case" onClick={handleSignout} >Log Out</p>
                 <li><p>{user.displayName}</p></li>
             </>
             : <li><Link to="/login">Login</Link></li>}
@@ -42,7 +42,7 @@ const Navbar = () => {
                         {menu}
                     </ul>
                 </div>
-                <p className="btn btn-ghost normal-case text-xl"><p>SA Manufacture House</p></p>
+                <p className="ml-12 btn btn-ghost hover:bg-white font-bold normal-case text-xl"><p>SA Manufacture House</p></p>
             </div>
             <div className="navbar-end hidden lg:flex ">
                 <ul className="menu menu-horizontal p-0">

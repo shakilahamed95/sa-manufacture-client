@@ -17,7 +17,7 @@ const Blogs = () => {
                     <div className=' border p-4 mb-6 text-black' >
                         <h2 className='text-xl text-black'>Question :What are the different ways to manage a state in a React application?</h2>
                         <p>
-                            There are 4 main types of state to manage state in react applicatopn. They are :Local state React,Global state,Server state ,URL state. UseState is a Local State in React  can take accept any valid data value, including primitive and object values. React components have a built-in state object where the state is encapsulated data where we store assets that are persistent between component renderings.
+                            There are 4 main types of state to manage state in react applicatopn. They are :Local state React,Global state,Server state ,URL state. UseState is a Local State in React that can take accept any valid data value, including primitive and object values. React components have a built-in state object where the state is encapsulated data where we store assets that are persistent between component renderings.Once we attempt to manage state across multiple components we will reach a point in our application where patterns like “lifting state up” and passing callbacks down to update your state from components lead to lots and lots of props. To manage it, however, we should opt for a third-party solution. Many developers are inclined to use built-in React features like the Context API to manage their state.
                         </p>
                     </div>
                     <div className=' border p-4 mb-6 text-black'>

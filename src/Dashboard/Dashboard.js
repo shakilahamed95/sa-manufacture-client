@@ -20,7 +20,7 @@ const Dashboard = () => {
                 <div className="drawer-content ">
                     <h1 className='text-3xl font-serif text-primary'>Welcome To Your Dashboard</h1>
                     <Outlet></Outlet>
-                    <label for="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open Sidebar</label>
+                    <label for="my-drawer-2" className="btn btn-primary drawer-button  lg:hidden">Open Sidebar</label>
 
                 </div>
                 <div className="drawer-side">
