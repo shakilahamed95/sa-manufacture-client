@@ -20,7 +20,7 @@ const OrderDeleteConfirmation = ({ deleteOrder, refetch, setDeleteOrder }) => {
     }
     return (
         <div>
-            <input type="checkbox" id="order-delete-confirmation" className="modal-toggle" />
+            <input type="checkbox" id="order-delete-confirmation " className="modal-toggle" />
             <div className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box">
                     <h3 className="font-bold text-lg text-red-500">Are You sure want to delete {name}</h3>

@@ -26,7 +26,7 @@ const ManageSingleOrder = ({ order, index, refetch, setDeleteOrder }) => {
             <td>{userName}</td>
             <td>{name}</td>
             <td>{status ? <p className='text-blue-500'>{status}</p> : <p className='text-red-500 '>Unpaid</p>}</td>
-            <td>{status ? <button id='ship' onClick={handleShiped} di className="btn btn-sm btn-primary">Shipping?</button> : <>
+            <td>{status ? <button id='ship' onClick={handleShiped} di className="btn btn-sm btn-neutral">Shipping?</button> : <>
                 <label onClick={() => setDeleteOrder(order)} for="order-delete-confirmation" className="btn btn-sm">Delete</label>
             </>}</td>
         </tr>

@@ -52,16 +52,16 @@ const MyProfile = () => {
                     user={user}
                 ></UpdateProfile>
             </div>
-            <div className='card lg:max-w-lg md:max-w-md bg-base-100 shadow-xl'>
-                <h1 className='text-primary text-center text-2xl'>Update Your Profile {user.displayName}</h1>
-                <form onSubmit={handleUpdateUser} className='grid grid-cols-1 gap-3 justify-items-center mt-2'>
+            <div className=' lg:max-w-lg md:max-w-md bg-base-100 shadow-xl mt-12  '>
+                <h1 className='text-primary text-center text-3xl mb-5'>Update Your Profile {user.displayName}</h1>
+                <form onSubmit={handleUpdateUser} className='grid grid-cols-1 gap-3 justify-items-center mt-2 card'>
                     <input type="text" name='education' placeholder=" Enter your education level" className="input input-bordered w-full max-w-xs" />
                     <input type="text" name='location' placeholder=" Enter your location" className="input input-bordered w-full max-w-xs" />
                     <input type="text" name='phone' placeholder="Enter your phone number" className="input input-bordered w-full max-w-xs" />
                     <input type="text" name='linkdin' placeholder="Enter your LinkedIn profile link" className="input input-bordered w-full max-w-xs" />
                     <input type="text" name='image' placeholder=" Enter your image url" className="input input-bordered w-full max-w-xs" />
                     <br />
-                    <button className="btn btn-outline btn-primary">submit</button>
+                    <button className="btn btn-neutral mb-3">submit</button>
                 </form>
             </div>
 

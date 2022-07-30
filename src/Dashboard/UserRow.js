@@ -23,7 +23,7 @@ const UserRow = ({ user, index }) => {
         <tr>
             <td>{index + 1}</td>
             <td>{email}</td>
-            <td>{role == 'admin' ? <p>Admin </p> : <button onClick={makeAdmin} className="btn btn-xs">Make Admin</button>}</td>
+            <td>{role == 'admin' ? <p>Admin </p> : <button onClick={makeAdmin} className="btn btn-xs btn-neutral">Make Admin</button>}</td>
         </tr>
 
     );

@@ -12,7 +12,8 @@ const AboutUs = () => {
             <div className="hero-content flex-col lg:flex-row-reverse items-center justify-center">
                 <img src={about} className="max-w-sm rounded-lg shadow-2xl lg:mr-20" alt='' />
                 <div>
-                    <h1 className="py-6 text-black text-xl">Our product portfolio is comprised of the most trusted brands and we offering the finest customer service. We offer top quality products at reasonable prices, provide unparalleled technical assistance, and back it all up with outstanding customer support.</h1>
+                    <h1 className='text-3xl font-medium'>We Provide Best Tools In The World</h1>
+                    <h1 className="mt-2 mb-2 text-black">Our product portfolio is comprised of the most trusted brands and we offering the finest customer service. We offer top quality products at reasonable prices, provide unparalleled technical assistance, and back it all up with outstanding customer support.</h1>
                     <button onClick={handleNavigate}
                         className='btn bg-neutral text-white'>Explore Tools</button>
                 </div>

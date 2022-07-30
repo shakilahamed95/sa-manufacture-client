@@ -28,7 +28,7 @@ const AddProduct = () => {
     }
     return (
         <div>
-            <h1 className='text-primary text-center text-2xl'>Add New Tool</h1>
+            <h1 className='text-primary text-center text-3xl '>Add New Tool</h1>
             <div className='flex justify-center items-center'>
                 <div className="card w-96 bg-base-100 shadow-xl">
                     <div className="card-body">
@@ -46,7 +46,7 @@ const AddProduct = () => {
                                 rows={5}
                             ></textarea>
                             <br />
-                            <button className="btn btn-outline btn-primary">submit</button>
+                            <button className="btn  btn-neutral">submit</button>
                         </form>
                     </div>
                 </div>

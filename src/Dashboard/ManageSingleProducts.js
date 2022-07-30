@@ -11,7 +11,7 @@ const ManageSingleProducts = ({ tool, index, setAdminDelete }) => {
             <td>{price}</td>
             <td>{quantity}</td>
             <td>
-                <label onClick={() => setAdminDelete(tool)} for="admin-delete" className="btn btn-sm">Delete</label>
+                <label onClick={() => setAdminDelete(tool)} for="admin-delete" className="btn btn-sm btn-neutral">Delete</label>
             </td>
         </tr>
     );

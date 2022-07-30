@@ -6,7 +6,7 @@ const Summery = () => {
         <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 h-40 summery'>
             <div className='flex items-center justify-center'>
                 <div>
-                    <i class="fas fa-gift text-4xl" style={{ color: '#004DDC' }}></i>
+                    <i className="fas fa-gift text-4xl" style={{ color: '#004DDC' }}></i>
                 </div>
                 <div className='ml-5'>
                     <h1 className='text-xl'>Free Shipping</h1>
@@ -15,7 +15,7 @@ const Summery = () => {
             </div>
             <div className='flex items-center justify-center'>
                 <div>
-                    <i class="fas fa-exchange text-4xl" style={{ color: '#004DDC' }}></i>
+                    <i className="fas fa-exchange text-4xl" style={{ color: '#004DDC' }}></i>
                 </div>
                 <div className='ml-5'>
                     <h1 className='text-xl'>Free Return</h1>
@@ -24,7 +24,7 @@ const Summery = () => {
             </div>
             <div className='flex items-center justify-center'>
                 <div>
-                    <i class="fas fa-shield text-4xl" style={{ color: '#004DDC' }}></i>
+                    <i className="fas fa-shield text-4xl" style={{ color: '#004DDC' }}></i>
                 </div>
                 <div className='ml-5'>
                     <h1 className='text-xl'>Secure Payment</h1>
@@ -33,7 +33,7 @@ const Summery = () => {
             </div>
             <div className='flex items-center justify-center'>
                 <div>
-                    <i class="fas fa-headset text-4xl" style={{ color: '#004DDC' }}></i>
+                    <i className="fas fa-headset text-4xl" style={{ color: '#004DDC' }}></i>
                 </div>
                 <div className='ml-5'>
                     <h1 className='text-xl'>24/7 Support</h1>
