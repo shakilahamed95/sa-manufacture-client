@@ -2,7 +2,7 @@ import React from 'react';
 
 const GetUpdate = () => {
     return (
-        <div className='bg-primary px-10 py-14 '>
+        <div className='bg-secondary px-10 py-14 '>
             <div className='text-center pb-14 text-white'>
                 <p className='text-xl font-bold text-transparent bg-clip-text '>
                 </p>

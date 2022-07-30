@@ -8,7 +8,7 @@ import SingleBusinessSummery from './SingleBusinessSummery';
 
 const BusinessSummery = () => {
     return (
-        <div className='container my-12' data-aos='fade-right'
+        <div className='container my-24' data-aos='fade-right'
             data-aos-duration='1000'
             data-aos-delay='200'>
             <h1 className='text-center text-primary text-3xl my-12 font-bold'>Business Summery</h1>
