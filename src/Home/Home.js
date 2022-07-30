@@ -8,6 +8,7 @@ import Banner from './Banner/Banner';
 import BusinessSummery from './BusinessSummery';
 import Experts from './Experts';
 import GetUpdate from './GetUpdate';
+import ImageBanner from './ImageBanner/ImageBanner';
 import Summery from './Summery/Summery';
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
             <Summery></Summery>
             <AboutUs></AboutUs>
             <Experts></Experts>
+            <ImageBanner></ImageBanner>
             <Alltools></Alltools>
             <BusinessSummery></BusinessSummery>
             <AllReview></AllReview>

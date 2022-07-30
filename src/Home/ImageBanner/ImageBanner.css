@@ -1,0 +1,7 @@
+.background-image {
+    background: linear-gradient(rgba(44, 8, 8, 0.5), rgba(3, 3, 115, 0.4)), url(../../Images/manufacturing.webp);
+    background-size: cover;
+    height: 60vh;
+    background-position: center;
+    overflow: hidden;
+}
