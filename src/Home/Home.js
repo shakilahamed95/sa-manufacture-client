@@ -8,12 +8,14 @@ import Banner from './Banner/Banner';
 import BusinessSummery from './BusinessSummery';
 import Experts from './Experts';
 import GetUpdate from './GetUpdate';
+import Summery from './Summery/Summery';
 
 const Home = () => {
     return (
         <div>
             <Navbar></Navbar>
             <Banner></Banner>
+            <Summery></Summery>
             <AboutUs></AboutUs>
             <Experts></Experts>
             <Alltools></Alltools>
