@@ -28,3 +28,5 @@ This website is a manufacture company website that creates some tools and sell t
 - An user can purches product from this website to place an order he or she must need to log in and be an authorized user.He or she can add review about the product. Delete unpaid order an pay for his product.User can see an extra rooute called dashboard after he or she log in.
 - Both user and admin can update their profile.
 - In my portfolio i provide some my information with education background
+- Admin email:shakilahamed@gmail.com
+- Admin Password: 123456
