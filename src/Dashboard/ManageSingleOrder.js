@@ -19,6 +19,20 @@ const ManageSingleOrder = ({ order, index, refetch, setDeleteOrder }) => {
 
             })
     }
+    const handleDelete = () => {
+        fetch(`https://powerful-sands-85071.herokuapp.com/order/${_id}`, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    setDeleteOrder(null)
+                    toast.success('You have Successfully Delete an unpaid  order')
+                    refetch()
+                }
+            })
+
+    }
 
     return (
         <tr>
@@ -27,7 +41,8 @@ const ManageSingleOrder = ({ order, index, refetch, setDeleteOrder }) => {
             <td>{name}</td>
             <td>{status ? <p className='text-blue-500'>{status}</p> : <p className='text-red-500 '>Unpaid</p>}</td>
             <td>{status ? <button id='ship' onClick={handleShiped} di className="btn btn-sm btn-neutral">Shipping?</button> : <>
-                <label onClick={() => setDeleteOrder(order)} for="order-delete-confirmation" className="btn btn-sm">Delete</label>
+                {/* <label onClick={() => setDeleteOrder(order)} for="order-delete-confirmation" className="btn btn-sm">Delete</label> */}
+                <button onClick={() => handleDelete(_id)} className="btn btn-error btn-sm">Delete</button>
             </>}</td>
         </tr>
     );
