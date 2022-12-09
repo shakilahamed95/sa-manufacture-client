@@ -5,7 +5,7 @@ const DeleteConfirm = ({ deleting, email, setDeleting }) => {
     const { _id } = deleting
 
     const handleDelete = () => {
-        fetch(`https://powerful-sands-85071.herokuapp.com/orders/${_id}`, {
+        fetch(`https://sa-manufacture-server-4jap.onrender.com/orders/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

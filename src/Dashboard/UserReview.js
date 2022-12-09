@@ -23,7 +23,7 @@ const UserReview = () => {
                 ratings: event.target.rating.value,
                 image: event.target.image.value
             }
-            fetch('https://powerful-sands-85071.herokuapp.com/review', {
+            fetch('https://sa-manufacture-server-4jap.onrender.com/review', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',

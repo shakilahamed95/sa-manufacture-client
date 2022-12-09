@@ -12,7 +12,7 @@ const AddProduct = () => {
             description: event.target.text.value,
             img: event.target.image.value
         }
-        fetch('https://powerful-sands-85071.herokuapp.com/tools', {
+        fetch('https://sa-manufacture-server-4jap.onrender.com/tools', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Banner.css'
-
 const Banner = () => {
     const navigate = useNavigate()
     const handleNavigate = () => {
@@ -26,8 +25,8 @@ const Banner = () => {
                 <button data-aos='fade-up'
                     onClick={handleNavigate}
                     data-aos-delay='2000' className='btn bg-neutral text-white mt-4'>View Tools</button>
-            </div>
 
+            </div>
         </div>
     );
 };

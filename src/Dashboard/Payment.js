@@ -7,7 +7,7 @@ const stripePromise = loadStripe('pk_test_51L0X15GM6Ak3ZGCwHJueygHsNS8zU2tNGTzUA
 
 const Payment = () => {
     const { id } = useParams()
-    const url = `https://powerful-sands-85071.herokuapp.com/orders/${id}`
+    const url = `https://sa-manufacture-server-4jap.onrender.com/orders/${id}`
     const [order, setOrder] = useState({})
     useEffect(() => {
         fetch(url)

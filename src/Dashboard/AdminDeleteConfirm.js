@@ -5,7 +5,7 @@ const AdminDeleteConfirm = ({ adminDelete, refetch, setAdminDelete }) => {
     const { name, _id } = adminDelete
 
     const handledelete = id => {
-        fetch(`https://powerful-sands-85071.herokuapp.com/tools/${id}`, {
+        fetch(`https://sa-manufacture-server-4jap.onrender.com/tools/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

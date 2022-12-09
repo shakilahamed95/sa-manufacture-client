@@ -4,7 +4,7 @@ const ManageSingleOrder = ({ order, index, refetch, setDeleteOrder }) => {
     const { userName, name, status, _id } = order;
 
     const handleShiped = () => {
-        fetch(`https://powerful-sands-85071.herokuapp.com/order/${_id}`, {
+        fetch(`https://sa-manufacture-server-4jap.onrender.com/order/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
@@ -20,7 +20,7 @@ const ManageSingleOrder = ({ order, index, refetch, setDeleteOrder }) => {
             })
     }
     const handleDelete = () => {
-        fetch(`https://powerful-sands-85071.herokuapp.com/order/${_id}`, {
+        fetch(`https://sa-manufacture-server-4jap.onrender.com/order/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

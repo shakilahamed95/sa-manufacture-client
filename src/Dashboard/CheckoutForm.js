@@ -13,7 +13,7 @@ const CheckoutForm = ({ order }) => {
 
     useEffect(() => {
         if (totalMoney) {
-            fetch('https://powerful-sands-85071.herokuapp.com/create-payment-intent', {
+            fetch('https://sa-manufacture-server-4jap.onrender.com/create-payment-intent', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
@@ -70,7 +70,7 @@ const CheckoutForm = ({ order }) => {
                 transactionId: paymentIntent.id,
             }
 
-            fetch(`https://powerful-sands-85071.herokuapp.com/orders/${_id}`, {
+            fetch(`https://sa-manufacture-server-4jap.onrender.com/orders/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

@@ -13,7 +13,7 @@ const MyOrder = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://powerful-sands-85071.herokuapp.com/orders?email=${email}`)
+            fetch(`https://sa-manufacture-server-4jap.onrender.com/orders?email=${email}`)
                 .then(res => res.json())
                 .then(data => setOrders(data))
         }

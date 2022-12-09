@@ -11,6 +11,7 @@
     "aos": "^2.3.4",
     "daisyui": "^2.15.0",
     "firebase": "^9.8.1",
+    "meta-test5": "^4.3.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-firebase-hooks": "^5.0.3",

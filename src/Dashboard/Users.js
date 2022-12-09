@@ -4,7 +4,7 @@ import UserRow from './UserRow';
 const Users = () => {
     const [users, setUsers] = useState([])
     useEffect(() => {
-        fetch('https://powerful-sands-85071.herokuapp.com/user')
+        fetch('https://sa-manufacture-server-4jap.onrender.com/user')
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [users])

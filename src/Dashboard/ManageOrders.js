@@ -6,7 +6,7 @@ import OrderDeleteConfirmation from './OrderDeleteConfirmation';
 
 const ManageOrders = () => {
     const [deleteOrder, setDeleteOrder] = useState(null)
-    const { data: orders, isLoading, refetch } = useQuery('allOrder', () => fetch('https://powerful-sands-85071.herokuapp.com/allorders').then(res => res.json()))
+    const { data: orders, isLoading, refetch } = useQuery('allOrder', () => fetch('https://sa-manufacture-server-4jap.onrender.com/allorders').then(res => res.json()))
     if (isLoading) {
         return <Loading></Loading>
     }
